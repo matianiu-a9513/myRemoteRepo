@@ -18,7 +18,7 @@ public class myAppTester {
 	  System.out.println();
 
 	  // add a line below to call your myTestMethod from here  then remove the block comment symbols  
-
+	  myTestMethod("1234321");
 	}
 	
 	//This is a method to reverse the number by recursion
@@ -33,15 +33,21 @@ public class myAppTester {
 	       }
 	   }
 
-
-	   /* 
-	       add your test method in this space then remove the block comment symbols
-	       public static void myTestMethod(...){
-
-            
-
-		   }
+	// add your test method in this space then remove the block comment symbols
+	public static void myTestMethod(String str) {
+	
+		int i = 0;
+	    for (; i < str.length() / 2; i++)
+	    	if (str.charAt(i) != str.charAt(str.length() - 1 - i))
+	    		break;
+	    
+	    if (i == str.length() / 2)
+	    	System.out.println("String is a palindrome");
+	    else
+	    	System.out.println("String is not a palindrome");
+	
+	}
 	 
-	   */
+	   
 
 }
